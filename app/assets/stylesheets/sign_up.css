@@ -1,0 +1,145 @@
+.primary-button{
+   width: 264px;
+   height: 40px;
+   font-family: sans-serif;
+   font-size: 15px;
+   font-weight: 500;
+   border-radius: 15px;
+   background-color: hsl(348, 90%, 49%) ;
+   color: white;
+   margin: 10px;
+   border: 0;
+   padding: 5px;
+    margin-top: 20px;
+    
+}
+
+.sign-up-modal{
+    /* Hidden by default */
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 25px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  text-align: right;
+  
+}
+.secondary-button{
+   width: 264px;
+   height: 40px;
+   font-family: sans-serif;
+   font-size: 15px;
+   font-weight: 500;
+   border-radius: 15px;
+   background-color: hsl(211, 100%, 40%) ;
+   color: white;
+   margin: 10px;
+   border: 0;
+   padding: 5px;
+    margin: 5px;
+}
+.secondary-button:hover{
+    cursor: pointer;
+    background-color: hsl(211, 100%, 35%)
+}
+
+.secondary-button:active{
+    cursor: pointer;
+    background-color: hsl(211, 100%, 20%)
+}
+
+
+.primary-button:hover{
+    cursor: pointer;
+    background-color:hsl(348, 90%, 45%);
+}
+
+.primary-button:active{
+    cursor: pointer;
+    background-color: #9E1E19;
+    content: "sign Up";
+   
+    
+
+}
+.close-button{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    color:hsl(50, 4%, 25%); ;
+    border-radius: 50%;
+    border: none;
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.close-button:hover{
+    cursor: pointer;
+    background-color:rgb(232, 230, 230) ;
+}
+.close-button:active{
+    background-color:rgb(199, 199, 199) ;
+}
+input{
+   width: 250px;
+   height: 40px;
+   font-family: sans-serif;
+   font-size: 20px;
+   color:  hsl(50, 4%, 30%) ;
+   border-radius: 10px;
+   border: solid 1pt  hsl(50, 4%, 25%)  ;
+   margin: 5px;
+   font-weight: 100;
+}
+
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    clear: unset;
+    height: 525px;
+   
+}
+p{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 20px;
+    font-weight: 500;
+    color: hsl(50, 4%, 25%) ;
+    margin: 8px;
+}
+#or{
+     font-family: Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(50, 4%, 25%) ;
+    margin: 1px;
+}
+
+
+.message{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    font-size: 40px;
+    color: hsl(50, 4%, 25%) ;
+}
+.slogan{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    font-size: 15px;
+    color: hsl(50, 4%, 25%) ;
+    font-weight: 100;
+}
