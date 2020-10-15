@@ -27,3 +27,5 @@ test:
 production:
   <<: *default
   database: Vibes_production
+  username: Vibes
+  password: <%= ENV['VIBES_DATABASE_PASSWORD'] %>
