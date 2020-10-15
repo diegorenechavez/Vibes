@@ -44,7 +44,7 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <div className="sign-up-modal">
-        <button className="close-button">X</button>
+       <Link to="/"> <button className="close-button">X</button> </Link>
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
           <h1 className="message">Welcome To Vibes</h1>

@@ -14,6 +14,7 @@ const App = () => {
       <Route  exact path="/" component={HomeContainer} />
       <Redirect to="/"/>
       </Switch>
+      
     </div>
   );
 };

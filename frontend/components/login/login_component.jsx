@@ -41,11 +41,22 @@ class LoginForm extends React.Component {
       </ul>
     );
   }
+  showModal(){
+     state = {
+         show: false
+     };
+     showModal = e => {
+         this.setState({show: true})
+     }
+  }
 
   render() {
     return (
       <div className="sign-up-modal">
-        <button className="close-button">X</button>
+        <Link to="/">
+          {" "}
+          <button className="close-button">X</button>{" "}
+        </Link>
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
           <h1 className="message">Welcome Back To Vibes</h1>

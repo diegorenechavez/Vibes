@@ -1,25 +1,90 @@
 .nav-bar{
     
-    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+
     
 }
 .logo-home{
-    float: left;
+     display:inline-block;
+     vertical-align: middle;
+    
+    
 }
 .logo-text{
  position: relative;
- top: 29px;
  font-family: Arial, Helvetica, sans-serif;
- color: hsl(50, 4%, 25%);
+ color: hsl(348, 90%, 49%);
  font-size: 25px;
+ display: block;
+ 
     
 }
 
 .nav-button1{
     height: 30px;
-    border: none;
+    font-family: sans-serif;
+   font-size: 15px;
+   font-weight: 500;
+   border-radius: 15px;
+   background-color: hsl(348, 90%, 49%) ;
+   color: white;
+   margin: 10px;
+   border: 0;
+   width: 75px;
+   float: right;
+    
+
 }
 
+.nav-button1:hover{
+    cursor: pointer;
+}
 .nav-button2{
     height: 30px;
+    font-family: sans-serif;
+   font-size: 15px;
+   font-weight: 600;
+   border-radius: 15px;
+   background-color: hsl(35, 28%, 90%) ;
+   color: hsl(50, 4%, 25%);
+   margin: 10px;
+   border: 0;
+   width: 75px;
+   
+   
+}
+
+.nav-button2:hover{
+    cursor: pointer;
+}
+
+.place-holder{
+    
+    display: inline;
+    
+}
+
+.spacer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+
+}
+.spacer-left{
+   display: flex;
+}
+
+.image-div{
+    margin-right: 10px;
+   
+}
+
+.greeting{
+    display: contents;
 }
