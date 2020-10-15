@@ -8,13 +8,13 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       render 'api/users/show.json.jbuilder'
     else
-      render json: ['Invalid Username or Password CAN U SEE ME??'], status: 404
+      render json: ['Invalid Username or Password'], status: 404
     end
   end
 
   def destroy
     if current_user
-      logout
+      logout!
       render json: {}
     else
       render json: ['No one to logout'], status: 404

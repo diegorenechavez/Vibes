@@ -109,7 +109,7 @@ input{
     padding: 25px;
     border-radius: 8px;
     clear: unset;
-    height: 525px;
+    height: 540px;
    
 }
 p{
@@ -142,4 +142,41 @@ p{
     font-size: 15px;
     color: hsl(50, 4%, 25%) ;
     font-weight: 100;
+}
+.login-footer{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(50, 4%, 25%) ;
+}
+
+.link-text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(50, 4%, 25%);
+    
+}
+
+#or2{
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(50, 4%, 25%) ;
+}
+
+.login-footer2{
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(50, 4%, 25%) ;
+}
+
+.errors{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    font-size: 12px;
+    text-align: left;
+    color: hsl(4, 92%, 41%) ;
+}
+.errors-wrapper{
+    margin: 0px;
+   
 }

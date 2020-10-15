@@ -4,16 +4,15 @@ import {
 } from "../actions/session_actions.js";
 
 const _nullUser = {
-  id: null,
+  currentUser: null,
 };
 
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
-  let newState = Object.assign({}, state);
+  
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      newState.id = action.user.id;
-      return newState;
+      return Object.assign({},{currentUser:action.user});
     case LOGOUT_CURRENT_USER:
       return _nullUser;
     default:
