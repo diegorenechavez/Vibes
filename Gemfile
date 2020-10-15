@@ -52,8 +52,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'bcrypt'
 end
+  gem 'bcrypt'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
