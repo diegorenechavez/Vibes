@@ -1,6 +1,6 @@
 import React from 'react';
 import PinIndexitem from "./pin_index_item";
-
+import Home from "../home_container/home";
 
 class PinsIndex extends React.Component{
     constructor(props){
@@ -16,13 +16,14 @@ class PinsIndex extends React.Component{
             return null;
         }else{
         return (
-            <div>
-                <ul>
+            <>
+            <Home />
+                <figure className="main-feed" >
                     {
                        this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} />))
                     }
-                </ul>
-            </div>
+                </figure>
+            </>
         );
                 }
     }

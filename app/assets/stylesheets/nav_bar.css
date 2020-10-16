@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+   /* Set the navbar to fixed position */
+  /* Position the navbar at the top of the page */
+  width: 100%; 
     
     
 

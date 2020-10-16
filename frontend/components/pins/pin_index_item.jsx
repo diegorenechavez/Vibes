@@ -2,10 +2,10 @@ import React from 'react';
 
 const PinIndexitem = (props) =>{
     return (
-    <>
-    <img src={props.pin.photoUrl} alt=""/>
-    <div>{props.pin.description}</div>
-    </>
+    <div className="brick">
+    <img className="pin"src={props.pin.photoUrl} alt=""/>
+    {props.pin.description}
+    </div>
     );
 };
 
