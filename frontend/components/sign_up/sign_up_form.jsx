@@ -10,9 +10,14 @@ class SignUpForm extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     this.props.signup(this.state);
+    this.props.clearErrors();
   }
   handleChange(field) {
     return (e) => {
@@ -22,13 +27,14 @@ class SignUpForm extends React.Component {
   demoLogin(event) {
     event.preventDefault();
     const demoUser = {
-      username: "omardude",
-      password: "password",
-      firstname: "omar",
-      lastname: "user",
-      email: "omar@user.com",
+      username: "lizzie mcguire",
+      password: "123456",
+      firstname: "lizzie",
+      lastname: "mcguire",
+      email: "text@user.com",
     };
     this.props.login(demoUser);
+    this.props.clearErrors();
   }
 
   renderErrors() {

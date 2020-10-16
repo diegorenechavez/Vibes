@@ -14,7 +14,9 @@ class PinsFeed extends React.component{
         return (
             <div>
                 <ul>
-                    
+                    {
+                        map.(pin)<pin index item  >
+                    }
                 </ul>
             </div>
         );

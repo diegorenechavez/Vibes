@@ -1,7 +1,7 @@
 class Api::PinsController < ApplicationController
 
     def index
-        @pins - Pin.all
+        @pins = Pin.all
         render :index
     end 
 
@@ -10,4 +10,7 @@ class Api::PinsController < ApplicationController
     render :show
         
     end
-end
+
+
+
+end 

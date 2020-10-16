@@ -5,4 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(firstname:"test",lastname:"user",password:"password", email:"test@user.com", username:"user")
+user_1 = User.create!(firstname:"hillary",lastname:"duff",password:"123456", email:"test@user.com", username:"lizzie mcguire")
+pin_1 = Pin.create!(description: "mojito recipe")
+
+pin_1.photo.attach(io: File.open("/Users/diego/Desktop/vibes_photos/mojito.jpg"), filename:'mojito.jpg' )
