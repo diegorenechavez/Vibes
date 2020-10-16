@@ -1,26 +1,33 @@
 import React from 'react';
+import PinIndexitem from "./pin_index_item";
 
 
-class PinsFeed extends React.component{
+class PinsIndex extends React.Component{
     constructor(props){
         super(props);
     }
-
+    
     componentDidMount(){
         this.props.fetchAllPins();
     }
 
     render(){
+        if(this.props.pins.length === 0){
+            return null;
+        }else{
         return (
             <div>
                 <ul>
                     {
-                        map.(pin)<pin index item  >
+                       this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} />))
                     }
                 </ul>
             </div>
         );
+                }
     }
 
 
 }
+
+export default PinsIndex;

@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import PinsFeed from "./pins_feed";
+import PinsIndex from "./pins_index";
 import {fetchAllPins} from '../../actions/pin_actions';
 
 const mapStateToProps = state => {
     return {
-        pins:  Object.values(state.pins)
+        pins:  Object.values(state.entities.pins)
     };
 };
 
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch =>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PinsFeed);
+export default connect(mapStateToProps, mapDispatchToProps)(PinsIndex);

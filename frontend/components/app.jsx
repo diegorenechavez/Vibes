@@ -5,6 +5,7 @@ import LoginContainer from "./login/login_container";
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import { login } from "../util/session_api_util";
 import { AuthRoute} from '../util/route_util';
+import PinIndexContainer from "./pins/pin_index_container";
 const App = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const App = () => {
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <AuthRoute exact path="/login" component={LoginContainer} />
       <Route  exact path="/" component={HomeContainer} />
+      <Route exact path="/feed" component={PinIndexContainer}/>
       <Redirect to="/"/>
       </Switch>
       
