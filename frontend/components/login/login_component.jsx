@@ -58,18 +58,20 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    const {closeModal, openModal} = this.props
     return (
       <div className="sign-up-modal">
-        <Link to="/">
-          {" "}
-          <button className="close-button">X</button>{" "}
-        </Link>
+        {/* <Link to="/">
+          {" "} */}
+          <button onClick={()=> closeModal()}className="close-button">X</button>{" "}
+        {/* </Link> */}
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
           <h1 className="message">Welcome Back To Vibes</h1>
           <h5 className="slogan">Set a Mood</h5>
           {this.renderErrors()}
           <input
+            className="input1"
             type="text"
             onChange={this.handleChange("username")}
             value={this.state.username}
@@ -77,6 +79,7 @@ class LoginForm extends React.Component {
           />
 
           <input
+            className="input1"
             type="password"
             name="password"
             placeholder="Enter Password"
@@ -87,10 +90,10 @@ class LoginForm extends React.Component {
           <button className="primary-button">Log In!</button>
           <p id="or2">OR</p>
           <footer className="login-footer2">Not a member?</footer>
-          <Link className="link-text" to="/signup">
+          <div onClick={() => openModal('signup')} className="link-text" >
             {" "}
             Sign Up!
-          </Link>
+          </div>
         </form>
       </div>
     );

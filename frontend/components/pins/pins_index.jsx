@@ -1,15 +1,18 @@
 import React from 'react';
 import PinIndexitem from "./pin_index_item";
-import Home from "../home_container/home";
-
+import HomeContainer from "../home_container/home_container";
+import { trackPromise } from "react-promise-tracker";
 class PinsIndex extends React.Component{
     constructor(props){
         super(props);
     }
     
     componentDidMount(){
-        this.props.fetchAllPins();
+        trackPromise(
+        this.props.fetchAllPins());
     }
+
+    
 
     render(){
         if(this.props.pins.length === 0){
@@ -17,10 +20,10 @@ class PinsIndex extends React.Component{
         }else{
         return (
             <>
-            <Home />
+            <HomeContainer />
                 <figure className="main-feed" >
                     {
-                       this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} />))
+                       this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} fetchAllPins={this.props.fetchAllPins} />))
                     }
                 </figure>
             </>

@@ -1,0 +1,96 @@
+.main-feed2{
+ column-count: 8;
+ column-gap: 1em;
+ margin: 1.5em auto;
+  max-width: 120%;
+  column-gap: 1.5em;
+  overflow: hidden;
+  
+}
+
+
+.indenter{
+    background-color: aqua;
+    display: block;
+    width: 80%;
+}
+/* @keyframes []{
+    from{
+        [styles]
+    }
+    to{
+
+    }
+} */
+
+.splash-message{
+    margin-top: 200px;
+    text-align: center;
+    color: hsl(0, 0%, 25%);
+    font-size: 30px;
+    font-family: sans-serif;
+    display: block;
+    animation: myfirst 2s linear 2s infinite alternate;
+}
+.splash-message2{
+    margin-top: 20px;
+    text-align: center;
+    color: hsl(0, 0%, 25%);
+    font-size: 30px;
+    font-family: sans-serif;
+    display: block;
+    animation: myfirst 2s linear 2s infinite alternate;
+}
+/* .splash-message::before{
+    content: "Geeks"; 
+        animation: animate infinite 3s; 
+        padding-left: 10px; 
+} */
+
+/* @keyframes myfirst {
+  0% { 
+            content: "Geeks"; 
+        } 
+  
+        50% { 
+            content: "for"; 
+        } 
+  
+        75% { 
+            content: "Geeks"; 
+        } 
+} */
+
+
+
+
+.gradient{
+    position: fixed;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(transparent, white);
+    z-index: 1;
+
+}
+
+.brick2{
+    color: hsl(50, 4%, 25%);
+    font-size: 22px;
+    font-family: sans-serif;
+    text-align: left;
+    max-height: 800px;
+   max-width:  500px;
+    page-break-inside: avoid;
+
+}
+.pin2{
+     background-color: #eeeeee;
+    display: inline-block;
+    margin: 1em 0 0;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0;
+
+}

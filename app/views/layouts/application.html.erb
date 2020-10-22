@@ -5,9 +5,8 @@
     <link rel="icon" type="image/x-icon" href="<%= image_url('circle-cropped.png') %>" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <script type="text/javascript">
   window.logoURL = "<%= image_url('transparentLogo.png') %>";
   window.faviconURL = "<%= image_url('circle-cropped.png') %>";

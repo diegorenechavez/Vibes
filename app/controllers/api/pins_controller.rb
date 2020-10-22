@@ -1,4 +1,5 @@
 class Api::PinsController < ApplicationController
+    
 
     def index
         @pins = Pin.all
@@ -11,6 +12,21 @@ class Api::PinsController < ApplicationController
         
     end
 
+    def create
+        
+        @pin = Pin.create(pin_params)
+        if @pin.save
+            render :show
+        else 
+            render  json: @pin.errors.full_messages, status: 422
+        end 
+    end 
+
+
+    private
+    def pin_params
+        params.require(:pin).permit(:description, :content, :photo)
+    end 
 
 
 end 

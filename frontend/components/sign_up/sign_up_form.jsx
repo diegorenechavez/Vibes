@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import { openModal } from '../../actions/modal_actions';
 
 
 class SignUpForm extends React.Component {
@@ -35,6 +36,7 @@ class SignUpForm extends React.Component {
     };
     this.props.login(demoUser);
     this.props.clearErrors();
+    this.props.closeModal();
   }
 
   renderErrors() {
@@ -48,34 +50,43 @@ class SignUpForm extends React.Component {
   }
 
   render() {
+    const {closeModal,openModal} = this.props
     return (
       <div className="sign-up-modal">
-       <Link to="/"> <button className="close-button">X</button> </Link>
+        
+          <button className="close-button" onClick={() => closeModal()}>X</button>
+        
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
           <h1 className="message">Welcome To Vibes</h1>
           <h5 className="slogan">Set a Mood</h5>
-            {this.renderErrors()}
+          {this.renderErrors()}
           <input
+            className="input1"
             type="text"
             onChange={this.handleChange("email")}
             value={this.state.email}
             placeholder="Enter Email"
+            required
           />
 
           <input
+            className="input1"
             type="text"
             onChange={this.handleChange("username")}
             value={this.state.username}
             placeholder="Create a Username"
+            required
           />
 
           <input
+            className="input1"
             type="password"
             name="password"
             placeholder="Create a Password"
             value={this.state.password}
             onChange={this.handleChange("password")}
+            required
           />
 
           <button className="primary-button">Sign Up!</button>
@@ -87,10 +98,10 @@ class SignUpForm extends React.Component {
             Continue As Demo User
           </button>
           <footer className="login-footer">Already a member?</footer>
-          <Link className="link-text" to="/login">
+          <div className="link-text" onClick={() => openModal('login')}>
             {" "}
             Login
-          </Link>
+          </div>
         </form>
       </div>
     );

@@ -1,0 +1,153 @@
+.create-image-header{
+     /* right: 60px;
+    color: hsl(50, 4%, 10%);
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(118, 118, 118); */
+    margin-top: 20px;
+    right: 60px;
+    color: hsl(50, 4%, 10%);
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    /* text-decoration: underline; */
+    /* text-decoration-color: rgb(118, 118, 118) */
+}
+.pin-image2{
+      width: 500px;
+    border-radius: 25px;
+    max-height: 650px;
+    margin-left: 0px;
+    
+}
+.modal-form{
+      position: fixed; 
+  z-index: 2; 
+  padding-top: 25px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  text-align: right;
+}
+
+.create-image-form{
+    display: flex;
+    width: 1020px;
+    margin: auto;
+    border-radius: 25px;
+    border: 5px solid white;
+    margin-top: 50px;
+    /* position: relative; */
+    box-shadow: 0px 0 16px rgb(0 0 0 / 8%);
+    height: 715px;
+    background-color: white;
+}
+
+.right-side-creation{
+    display: flex;
+    flex-direction: column;
+    /* background-color: chartreuse; */
+    flex-basis: 45%;
+    margin-left: 20px;
+    
+}
+
+.photo-place-holder{
+    /* position: absolute; */
+    /* background-color: aqua; */
+    flex-basis: 50%;
+}
+
+
+.description-box{
+    width: 250px;
+   height: 40px;
+   font-family: sans-serif;
+   font-size: 20px;
+   color:  hsl(50, 4%, 30%) ;
+   border-radius: 10px;
+   border: solid 1pt  hsl(50, 4%, 25%);
+   font-weight: 100;
+}
+
+.content-box{
+    font-family: sans-serif;
+   font-size: 20px;
+   color:  hsl(50, 4%, 30%) ;
+   border-radius: 10px;
+   border: solid 1pt  hsl(50, 4%, 25%);
+   font-weight: 100;
+   height: 70%;
+   background-color:  rgb(249, 245, 245) ;
+   margin-top: 15px;
+}
+
+.create-pin-button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.create-pin-button::before {
+  content: 'Upload a Pin';
+  display: inline-block;
+  border: none;
+  border-radius: 22px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color:hsl(348, 90%, 49%);
+  color: white;
+    
+}
+
+.create-pin-button:hover::before {
+    background-color:hsl(348, 90%, 34%);
+    cursor: pointer;
+}
+.create-pin-button:active::before {
+    background-color: hsl(348, 90%, 29%);
+    cursor: pointer;
+}
+
+.button-container-create{
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-pin-button{
+    display: inline-block;
+     border: none;
+  border-radius: 22px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color:hsl(125, 55%, 35%);
+  color: white;
+}
+.save-pin-button:hover{
+    cursor: pointer;
+    background-color:hsl(125, 55%, 30%)
+}
+.save-pin-button:active{
+    cursor: pointer;
+    background-color:hsl(125, 55%, 27%)
+}
+
+input[type='file'] {
+  color: transparent;
+}

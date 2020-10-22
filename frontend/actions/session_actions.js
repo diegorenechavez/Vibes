@@ -30,6 +30,12 @@ export const clearErrors = () => {
     type: CLEAR_ERRORS
   };
 };
+// export const fetchCurrentUser = (userId) =>{
+//   return {
+//     type: RECEIVE_CURRENT_USER,
+//     user
+//   };
+// };
 
 
 export const login = (user) => (dispatch) => {

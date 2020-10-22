@@ -12,4 +12,24 @@ export const fetchPin= (pinId) =>{
         method: "GET"
     });
 
-}
+};
+
+export const createPin = (pin) =>{
+   
+    return $.ajax({
+      url: `/api/pins`,
+      method: "POST",
+      data: pin,
+      contentType: false,
+      processData: false,
+    });
+};
+
+export const saveToBoard = (board_pin) => {
+    return $.ajax( {
+      url: `/api/board_pins`,
+      method:`POST`,
+      data: {board_pin}
+      
+    });
+};

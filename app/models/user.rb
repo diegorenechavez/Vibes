@@ -4,6 +4,11 @@ class User < ApplicationRecord
    validates :email, presence:true, uniqueness:true
    validates :password, length: { minimum: 6 , allow_nil: true}
    validates :password_digest, presence: true
+   
+   has_many :boards,
+   foreign_key: :user_id,
+   class_name: :Board,
+   primary_key: :id
 
    after_initialize :ensure_session_token
 
