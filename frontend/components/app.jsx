@@ -21,7 +21,7 @@ const App = () => {
       <Switch>
         {/* <Route exact path ="/splash" component={SplashContainer} /> */}
         {/* <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
-        <Route exact path="/" component={SplashContainer} />
+        <AuthRoute exact path="/" component={SplashContainer} />
         <AuthRoute exact path="/login" component={LoginContainer} />
         <ProtectedRoute exact path="/feed" component={PinIndexContainer} />
         <ProtectedRoute exact path="/pins/new" component={CreatePinContainer} />
