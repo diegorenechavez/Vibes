@@ -23,7 +23,7 @@ import SplashContainer from "../splash/splash_container";
       
      
       <div className="greeting">
-        <p className="place-holder"> Hello, {currentUser.username}</p>
+        <p className="place-holder-name"> Hello, {currentUser.username[0].toUpperCase().concat(currentUser.username.slice(1))}</p>
         <button className="nav-button1" onClick={logout}>
           Log Out!
         </button>
@@ -43,22 +43,23 @@ import SplashContainer from "../splash/splash_container";
       <div className="nav-bar">
         <div className="spacer-left">
           <div className="image-div">
-          <img className="logo-home" src={window.logoURL} alt="vibes logo" />
+            <img className="logo-home" src={window.logoURL} alt="vibes logo" />
           </div>
-          
+
           <h1 className="logo-text">Vibes</h1>
-        
+
           {homeButton}
           {profileButton}
         </div>
         <div className="spacer">
-          <p className="place-holder">About</p>
-          <p className="place-holder">Blog</p>
-          <p className="place-holder">Business</p>
+          <a href="https://github.com/diegorenechavez" className="place-holder">
+            GitHub
+          </a>
+          <p className="place-holde">|</p>
+          <p className="place-holder">Portfolio</p>
+          <p className="place-holde">|</p>
           {display}
         </div>
-        
-  
       </div>
     );
 
