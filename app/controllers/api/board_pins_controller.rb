@@ -15,11 +15,18 @@ class Api::BoardPinsController < ApplicationController
     end 
 
     def show
+        
     end 
 
 
     def destroy
-    end 
+      @board_pin= BoardPin.find_by(pin_id: params[:pin_id])
+      if @board_pin.destroy
+        render json: @pin_id
+      else 
+        render json: @board_pin.errors.full_messages, status: 422
+      end 
+    end
 
 
     private 

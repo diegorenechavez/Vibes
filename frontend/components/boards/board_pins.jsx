@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const BoardPin = (props) =>{
     
     return (
+        <div>
       <div className="board-feed">
         {props.pins.map((pin) => (
           <Link to={`/pins/${pin.id}`} key={pin.id}>
@@ -13,6 +14,8 @@ const BoardPin = (props) =>{
             </div>
           </Link>
         ))}
+        
+      </div>
       </div>
     );
 };

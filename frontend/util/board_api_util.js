@@ -48,3 +48,10 @@ export const fetchBoardPins = (boardId) => {
         method: `GET`
     });
 };
+
+export const deleteBoardPin = (boardPinId)=>{
+    return $.ajax({
+        url:`/api/board_pins/${boardPinId}`,
+        method:'DELETE'
+    });
+};

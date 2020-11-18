@@ -4,6 +4,15 @@ import { fetchPin } from "../util/pin_api_util";
 
 export const RECEIVE_BOARD_PINS = "RECEIVE_BOARD_PINS";
 export const RECEIVE_BOARD_PIN = "RECEIVE_BOARD_PIN";
+export const REMOVED_BOARD_PIN = "REMOVED_BOARD_PIN";
+
+
+export const removedBoardPin = boardPinId => {
+  return {
+    type: REMOVED_BOARD_PIN,
+    boardPinId
+  };
+};
 
 
 export const receivedBoardPins = boardPins =>{
@@ -33,4 +42,6 @@ export const saveToBoard = (boardPin) => (dispatch) => {
   );
 };
 
-// receive board_pin
+export const deleteBoardPin = (boardPinId) => dispatch => {
+  return BoardApiUtil.deleteBoardPin(boardPinId).then(()=> dispatch(removedBoardPin(boardPinId)));
+};
