@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :pins, only: [:show, :create, :index]
     resources :boards, only: [:create, :show, :update,:destroy]
-    resources :board_pins, only:[:index, :create, :destroy]
+    resources :board_pins, only:[:index, :create, :destroy, :show]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

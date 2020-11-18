@@ -69,3 +69,62 @@
   column-gap: 1.5em;
   margin-top: 80px;
 }
+
+.menu{
+   text-align: center; 
+   font-size: 25px;
+   font-weight: 900;
+   cursor: pointer;
+   width: fit-content;
+   margin: auto;
+   
+}
+
+.board-menu{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+    height: 50px;
+}
+.selection{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+        top: 39px;
+        width: 150px;
+        display: none;
+        
+        
+    
+}
+
+.board-menu:hover .selection{
+    display: block;
+}
+
+.show-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.board-edit{
+   cursor: pointer;
+    
+    width: 125px;
+    border: none;
+    background-color: white;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.board-edit:hover{
+    color:hsl(348, 90%, 49%)
+
+}
+.board-edit:active{
+    color:hsl(348, 90%, 40%)
+}

@@ -16,14 +16,14 @@
     
 }
 .home-button{
-   color: white;
+ color: white;
  font-family: Arial, Helvetica, sans-serif;
-  background-color:  hsl(348, 90%, 49%);
- font-size: 20px;
+ background-color:  hsl(348, 90%, 49%);
+ font-size: 17px;
  display: block;
- border-radius: 25px;
+ border-radius: 10px;
  border: none;
- height: 45px;
+ height: 33px;
  width: 85px;
  margin-top: 5px;
  padding: 5px;
@@ -66,8 +66,8 @@
     font-family: sans-serif;
    font-size: 15px;
    font-weight: 500;
-   border-radius: 15px;
-   background-color: hsl(348, 90%, 49%) ;
+border-radius: 10px;
+   background-color: hsl(211, 100%, 40%)  ;
    color: white;
    margin: 10px;
    border: 0;
@@ -85,7 +85,7 @@
     font-family: sans-serif;
    font-size: 15px;
    font-weight: 600;
-   border-radius: 15px;
+   border-radius: 10px;
    background-color: hsl(35, 28%, 90%) ;
    color: hsl(50, 4%, 25%);
    margin: 10px;

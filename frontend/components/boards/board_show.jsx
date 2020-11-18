@@ -13,7 +13,7 @@ class BoardShow extends React.Component {
   componentDidMount() {
     const { fetchAllPins, fetchBoard, fetchBoardPins } = this.props;
     fetchBoardPins();
-    fetchAllPins();
+    
     fetchBoard(this.props.match.params.boardId);
     
   }
@@ -22,15 +22,23 @@ class BoardShow extends React.Component {
     const { board, pins, fetchBoard } = this.props;
    
     if (!board) return null;
+    const {deleteBoard} = this.props;
     return (
       <>
         <HomeContainer />
-       
+        <div className="show-container">
           <h1 className="board-header">{board.name}</h1>
           <h3 className="board-description">{board.description}</h3>
+          <div className="board-menu">
+            <div className="menu">…</div>
+            <div className="selection">
+              <button className="board-edit" onClick={() => deleteBoard(this.props.match.params.boardId).then(this.props.history.push(`/users/${this.props.match.params.userId}`))}>Delete Board</button>
+              <button className="board-edit">Edit Board</button>
+            </div>
+          </div>
+        </div>
 
-          <BoardPin pins={pins} />
-        
+        <BoardPin pins={pins} />
       </>
     );
   }

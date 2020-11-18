@@ -10,7 +10,7 @@ class Profile extends React.Component{
         
     }
     componentDidMount(){
-      this.props.fetchAllBoards(this.props.match.params.userId);
+      this.props.fetchAllBoards(this.props.match.params.userId).then(()=> this.props.fetchBoardPins());
     }
 
 
@@ -48,6 +48,7 @@ class Profile extends React.Component{
                   board={board}
                   key={i}
                   currentUser={this.props.currentUser}
+                  
                 />
               ))}
             </div>

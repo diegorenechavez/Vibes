@@ -4,6 +4,7 @@ import { fetchBoardPins } from "../../actions/board_pin_actions";
 import BoardShow from "./board_show";
 import {selectBoardPins} from "../../reducers/selectors";
 import { fetchAllPins } from "../../actions/pin_actions";
+import {deleteBoard} from "../../actions/board_actions";
 
 const mapStateToProps = (state, ownProps) => {
 
@@ -18,6 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
   fetchBoard: (boardId) => dispatch(fetchBoard(boardId)),
   fetchAllPins: () => dispatch(fetchAllPins()),
   fetchBoardPins: () => dispatch(fetchBoardPins()),
+  deleteBoard: (boardId) => dispatch(deleteBoard(boardId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BoardShow);

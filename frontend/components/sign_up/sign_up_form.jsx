@@ -53,13 +53,14 @@ class SignUpForm extends React.Component {
     const {closeModal,openModal} = this.props
     return (
       <div className="sign-up-modal">
-        
-          <button className="close-button" onClick={() => closeModal()}>X</button>
-        
+        <button className="close-button" onClick={() => closeModal()}>
+          X
+        </button>
+
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
-          <h1 className="message">Welcome To Vibes</h1>
-          <h5 className="slogan">Set a Mood</h5>
+            <h1 className="message">Welcome To Vibes</h1>
+         
           {this.renderErrors()}
           <input
             className="input1"
@@ -90,15 +91,14 @@ class SignUpForm extends React.Component {
           />
 
           <button className="primary-button">Sign Up!</button>
-          <p id="or">OR</p>
           <button
             className="secondary-button"
             onClick={(event) => this.demoLogin(event)}
           >
-            Continue As Demo User
+            Demo Login
           </button>
           <footer className="login-footer">Already a member?</footer>
-          <div className="link-text" onClick={() => openModal('login')}>
+          <div className="link-text" onClick={() => openModal("login")}>
             {" "}
             Login
           </div>

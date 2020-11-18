@@ -8,7 +8,7 @@
     text-decoration-color: rgba(118, 118, 118); */
     margin-top: 20px;
     right: 60px;
-    color: hsl(50, 4%, 10%);
+    color: hsl(0, 0%, 26%);
     font-size: 30px;
     font-family: sans-serif;
     text-align: center;
@@ -72,8 +72,9 @@
    font-size: 20px;
    color:  hsl(50, 4%, 30%) ;
    border-radius: 10px;
-   border: solid 1pt  hsl(50, 4%, 25%);
+   border: solid 1pt  hsl(50, 4%, 80%);
    font-weight: 100;
+       padding: 10px;
 }
 
 .content-box{
@@ -81,11 +82,12 @@
    font-size: 20px;
    color:  hsl(50, 4%, 30%) ;
    border-radius: 10px;
-   border: solid 1pt  hsl(50, 4%, 25%);
+   border: solid 1pt  hsl(50, 4%, 80%);
    font-weight: 100;
    height: 70%;
-   background-color:  rgb(249, 245, 245) ;
+   background-color:  white ;
    margin-top: 15px;
+   padding: 10px;
 }
 
 .create-pin-button::-webkit-file-upload-button {
@@ -93,10 +95,10 @@
 }
 
 .create-pin-button::before {
-  content: 'Upload a Pin';
+  content: 'Upload';
   display: inline-block;
   border: none;
-  border-radius: 22px;
+  border-radius: 10px;
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
@@ -107,6 +109,9 @@
   font-size: 18px;
   background-color:hsl(348, 90%, 49%);
   color: white;
+   width: 130px;
+    height: 31px;
+    text-align: center;
     
 }
 
@@ -127,7 +132,7 @@
 .save-pin-button{
     display: inline-block;
      border: none;
-  border-radius: 22px;
+  border-radius: 10px;
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
@@ -136,16 +141,18 @@
   margin-top: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  background-color:hsl(125, 55%, 35%);
+  background-color:hsl(211, 100%, 40%);
   color: white;
+      width: 130px;
+    height: 31px;
 }
 .save-pin-button:hover{
     cursor: pointer;
-    background-color:hsl(125, 55%, 30%)
+    background-color:hsl(211, 100%, 37%);
 }
 .save-pin-button:active{
     cursor: pointer;
-    background-color:hsl(125, 55%, 27%)
+    background-color:hsl(211, 100%, 35%);
 }
 
 input[type='file'] {

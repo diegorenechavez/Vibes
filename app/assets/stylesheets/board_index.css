@@ -6,11 +6,29 @@
     margin-top: 200px;
 }
 .board-image{
-    border: 1px solid rgb(175, 175, 175);
+    
     height: 160px;
     width: 200px;
-    border-radius: 25px;
+        border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: hsl(348, 90%, 40%);
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: 1px; 
+    padding: 5px;
+    
+    text-decoration: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
+
+a{
+    text-decoration: none;
+}
+
 .dropdown-profile{
     position: absolute;
     width: 220px;
@@ -19,7 +37,7 @@
     left: 55px; 
     border: 1px solid rgba(135, 135, 135, 0.495);
     height: 150px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex;
@@ -50,11 +68,10 @@
 
 .dropdown-item:hover{
     cursor: pointer;
-    color: antiquewhite;
-    background-color:hsl(348, 90%, 40%) ;
+    color: hsl(348, 90%, 40%) ;
 }
 .dropdown-item:active{
-    background-color:hsl(348, 90%, 35%)
+    color: hsl(348, 90%, 40%) ;
 }
 .button-wrapper{
     position: relative;
@@ -76,10 +93,10 @@
     margin-bottom: 25px;
     align-self: center;
     font-size: 45px;
-    color: hsl(50, 4%, 33%); 
+    color: white; 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 40%;
-    background-color: rgba(211, 211, 211, 0.248);
+    background-color: hsl(211, 100%, 40%);
     
     
     
@@ -98,10 +115,10 @@
     
     
     margin: 5px;
-   
+    /* background-color: floralwhite;
     border: 1px solid rgba(135, 135, 135, 0.495);
     height: 160px;
-    width: 230px;
+    width: 230px; */
     border-radius: 25px;
 }
 .board-card:hover{
@@ -129,7 +146,7 @@
 }
 
 .board-title{
-    color: hsl(50, 4%, 22%);
+    color: hsl(0, 0%, 31%);
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 600;

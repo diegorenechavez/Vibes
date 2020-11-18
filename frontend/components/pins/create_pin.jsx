@@ -20,9 +20,10 @@ class CreatePin extends React.Component{
         formData.append('pin[description]',this.state.description);
         formData.append('pin[content]',this.state.content);
         formData.append('pin[photo]',this.state.photoFile);
-        this.props.createPin(formData).then((response) => {
-          this.props.history.push(`/pins/${response.pin.id}`);
-        });
+        this.props.createPin(formData).then(this.props.closeModal());
+        // .then((response) => {
+        //   this.props.history.push(`/pins/${response.pin.id}`);
+        // });
     }
 
     handleChange(field){

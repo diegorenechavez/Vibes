@@ -12,9 +12,7 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.clearErrors();
   }
   update(field) {
@@ -48,22 +46,38 @@ class LoginForm extends React.Component {
       </ul>
     );
   }
-  showModal(){
-     state = {
-         show: false
-     };
-     showModal = e => {
-         this.setState({show: true})
-     }
+  showModal() {
+    state = {
+      show: false,
+    };
+    showModal = (e) => {
+      this.setState({ show: true });
+    };
+  }
+
+  demoLogin(event) {
+    event.preventDefault();
+    const demoUser = {
+      username: "lizzie mcguire",
+      password: "123456",
+      firstname: "lizzie",
+      lastname: "mcguire",
+      email: "text@user.com",
+    };
+    this.props.login(demoUser);
+    this.props.clearErrors();
+    this.props.closeModal();
   }
 
   render() {
-    const {closeModal, openModal} = this.props
+    const { closeModal, openModal } = this.props;
     return (
       <div className="sign-up-modal">
         {/* <Link to="/">
           {" "} */}
-          <button onClick={()=> closeModal()}className="close-button">X</button>{" "}
+        <button onClick={() => closeModal()} className="close-button">
+          X
+        </button>{" "}
         {/* </Link> */}
         <form onSubmit={this.handleSubmit} className="signup-form">
           <img src={window.logoURL} alt="vibes logo" />
@@ -88,9 +102,15 @@ class LoginForm extends React.Component {
           />
 
           <button className="primary-button">Log In!</button>
-          <p id="or2">OR</p>
+          <button
+            className="secondary-button"
+            onClick={(event) => this.demoLogin(event)}
+          >
+            Demo Login
+          </button>
+          
           <footer className="login-footer2">Not a member?</footer>
-          <div onClick={() => openModal('signup')} className="link-text" >
+          <div onClick={() => openModal("signup")} className="link-text">
             {" "}
             Sign Up!
           </div>

@@ -42,7 +42,7 @@ export const deleteBoard = (boardId) => {
     });
 };
 
-export const fetchBoardPins = () => {
+export const fetchBoardPins = (boardId) => {
     return $.ajax({
         url: `/api/board_pins`,
         method: `GET`

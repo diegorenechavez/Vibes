@@ -13,6 +13,7 @@
     border-radius: 8px;
     padding: 0;
     min-height: 215px;
+     
 
 
     
@@ -65,13 +66,14 @@ html {
     position: relative;
     max-height: 470px;
     page-break-inside: avoid;
+   
  
 }
 
 .brick:hover {
     cursor: pointer;
     /* opacity: .92; */
-    text-decoration: underline;
+    
     
     
 }
