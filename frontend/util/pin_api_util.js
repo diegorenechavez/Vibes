@@ -25,6 +25,14 @@ export const createPin = (pin) =>{
     });
 };
 
+
+export const deletePin = (pinId) => {
+  return $.ajax({
+    url: `/api/users/${userId}/pins/${pinId}`,
+    method: `DELETE`
+  });
+};
+
 export const saveToBoard = (board_pin) => {
     return $.ajax( {
       url: `/api/board_pins`,
