@@ -10,9 +10,11 @@ class CreatePin extends React.Component{
             description:"",
             content:"",
             photoFile: null,
-            photoUrl: null
+            photoUrl: null,
+            
         };
     }
+    
 
     handleSubmit(e){
         e.preventDefault();
@@ -20,7 +22,8 @@ class CreatePin extends React.Component{
         formData.append('pin[description]',this.state.description);
         formData.append('pin[content]',this.state.content);
         formData.append('pin[photo]',this.state.photoFile);
-        this.props.createPin(formData).then(this.props.closeModal());
+        
+        this.props.createPin(formData,this.props.userId).then(this.props.closeModal());
         // .then((response) => {
         //   this.props.history.push(`/pins/${response.pin.id}`);
         // });

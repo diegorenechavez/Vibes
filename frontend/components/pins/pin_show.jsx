@@ -72,6 +72,7 @@ class PinShow extends React.Component {
               <div className="back-button-container">
                 <Link to="/feed" className="wtf">
                   <button className="back-button">Back</button>
+                  <button onClick={() => this.props.deletePin(this.props.match.params.pinId)}>Delete Pin</button>
                 </Link>
               </div>
               <div className="add-button-wrapper">

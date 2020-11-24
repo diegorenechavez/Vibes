@@ -11,4 +11,9 @@ class Pin < ApplicationRecord
     has_many :boards,
     through: :boards_pins
 
+    has_one :user,
+    class_name: :User,
+    foreign_key: :user_id,
+    primary_key: :id
+
 end

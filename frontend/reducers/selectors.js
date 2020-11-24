@@ -11,3 +11,17 @@ export const selectBoardPins = (boardPins, pins, BoardId) =>{
     if (pinsOnBoard[0] === undefined) return [];
     return pinsOnBoard;
 };
+
+
+
+
+export const personalPins = (allPins, user_id) =>{
+    let ownPins = [];
+    allPins.forEach(pin => {
+        if(pin.user_id === user_id){
+            ownPins.push.apply(pin);
+        }
+    });
+    if(ownPins[0] === undefined) return []; 
+    return ownPins;
+};

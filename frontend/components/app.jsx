@@ -14,6 +14,7 @@ import SplashContainer from "./splash/splash_container"
 import CreateFormContainer from "./boards/create_board_form_container"
 import Modal from './modal/modal'
 import BoardShowContainer from '../components/boards/board_show_container';
+import ProfilePinContainer from '../components/pin_profile/pin_profile_container';
 const App = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const App = () => {
         <ProtectedRoute exact path="/pins/:pinId" component={PinShowContainer} />
         <ProtectedRoute exact path="/users/:userId/boards/:boardId" component={BoardShowContainer} />
         <ProtectedRoute exact path="/users/:userId" component={ProfileContainer} />
+        <ProtectedRoute exact path="/users/:userId/pins" component={ProfilePinContainer} />
         {/* <ProtectedRoute exact path="/boards/new" component={CreateFormContainer} /> */}
         
         <Redirect to="/" />

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {fetchPin} from "../../actions/pin_actions";
+import {fetchPin, deletePin} from "../../actions/pin_actions";
 import PinShow from './pin_show';
 import {saveToBoard} from "../../actions/board_pin_actions";
 import {fetchAllBoards} from "../../actions/board_actions";
@@ -18,7 +18,8 @@ const mapDispatchToProps = (dispatch) => {
     return{
         saveToBoard: (boardPin) => dispatch(saveToBoard(boardPin)), 
         fetchPin: (pinId) => dispatch(fetchPin(pinId)),
-        fetchAllBoards: (userId) => dispatch(fetchAllBoards(userId))
+        fetchAllBoards: (userId) => dispatch(fetchAllBoards(userId)),
+        deletePin: (pinId)=> dispatch(deletePin(pinId))
     };
 };
 
