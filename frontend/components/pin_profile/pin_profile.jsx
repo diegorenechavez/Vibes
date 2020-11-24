@@ -21,7 +21,7 @@ class PinsProfile extends React.Component {
                     <div className="board-header-container">
                         <Link className="boards-header" to={`/users/${this.props.match.params.userId}`}>Boards</Link>
                         
-                        <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`}>Pins</Link>
+                        <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`} style={{backgroundColor:'hsl(348, 90%, 40%)', color:'white'}}>Pins</Link>
                     </div>
                     <div className="button-wrapper">
                         <div className="new-board-button" >+</div>

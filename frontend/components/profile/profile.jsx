@@ -22,7 +22,7 @@ class Profile extends React.Component{
             <div className="board-interface">
               <h1 className="username">{this.props.currentUser.username}</h1>
               <div className="board-header-container">
-                <Link className="boards-header" to={`/users/${this.props.match.params.userId}`}>Boards</Link>
+                <Link className="boards-header" to={`/users/${this.props.match.params.userId}`} style={{ backgroundColor: 'hsl(348, 90%, 40%)', color: 'white' }} >Boards</Link>
                 <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`}>Pins</Link>
               </div>
               <div className="button-wrapper">

@@ -31,18 +31,6 @@ class PinShow extends React.Component {
     this.props.saveToBoard(boardPin);
     
     
-    //       let boardPin = {
-    //         board_id: e.currentTarget.key,
-    //         pin_id: this.props.currentPinId,
-    //       };
-    //         debugger
-    //         this.props.saveToBoard(boardPin);
-       
-    // //    return (e)=>{
-    // //     e.preventDefault();
-    // //     this.setState(boardPin);
-    // //     };
-
   }
 
   handleSelection(e){
@@ -72,7 +60,7 @@ class PinShow extends React.Component {
               <div className="back-button-container">
                 <Link to="/feed" className="wtf">
                   <button className="back-button">Back</button>
-                  <button onClick={() => this.props.deletePin(this.props.match.params.pinId)}>Delete Pin</button>
+
                 </Link>
               </div>
               <div className="add-button-wrapper">
