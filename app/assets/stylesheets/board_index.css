@@ -141,12 +141,12 @@ a{
 .boards-header{
         text-align: center;
     color: hsl(50, 4%, 33%);
-    font-size: 25px;
+    font-size: 23px;
     font-family: sans-serif;
     
     width: 93px;
     height: 53px;
-    padding: 10px;
+    padding: 13px;
     margin: 3px;
     border-radius: 25px;
     display: flex;

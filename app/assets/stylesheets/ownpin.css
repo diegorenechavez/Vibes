@@ -16,12 +16,13 @@
     border-radius: 8px;
     padding: 0;
     min-height: 215px;
+    
      
 }
 
 .own-pin-container{
     page-break-inside: avoid;
-    
+    position: relative;
    
 }
 
@@ -31,3 +32,30 @@
     font-weight: 600;
 }
 
+.own-pin-image:hover .pin-button{
+    display: block;
+}
+
+.pin-button-delete{
+    display: none;
+         position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translate(-50%, -25%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: hsl(348, 90%, 40%);
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 6px;
+    font-weight: 200;
+}
+
+.own-pin-container:hover .pin-button-delete{
+    display: block;
+    cursor: pointer;
+}

@@ -35,7 +35,7 @@ export const createPin = (pin, userId) =>{
 
 export const deletePin = (pinId) => {
   return $.ajax({
-    url: `/api/users/${userId}/pins/${pinId}`,
+    url: `/api/pins/${pinId}`,
     method: `DELETE`
   });
 };

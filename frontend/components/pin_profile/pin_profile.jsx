@@ -45,7 +45,7 @@ class PinsProfile extends React.Component {
                 </div>
                 <HomeContainer/>
                 <ul className="own-pin-list">
-                    {this.props.pins.map(pin => (<OwnPinItem pin={pin} key={pin.id}/>))}
+                    {this.props.pins.map(pin => (<OwnPinItem pin={pin} key={pin.id} deletePin={this.props.deletePin}/>))}
                 </ul>
             </div>
         )
