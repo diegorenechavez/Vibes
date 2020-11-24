@@ -91,6 +91,7 @@ class PinShow extends React.Component {
             <h1 className="pin-description">{this.props.pin.description}</h1>
             <p className="content">{this.props.pin.content}</p>
           </div>
+                  <p>{}</p>
         </div>
       </>
     );

@@ -1,7 +1,12 @@
 class Api::BoardPinsController < ApplicationController
     def index
+      if params[:board_id]
+        @board_pins = BoardPin.where(board_id: params[:board_id])
+        render :index
+      else
         @board_pins = BoardPin.all
         render :index
+      end 
         
     end
 
@@ -16,6 +21,7 @@ class Api::BoardPinsController < ApplicationController
 
     def show
         
+
     end 
 
 

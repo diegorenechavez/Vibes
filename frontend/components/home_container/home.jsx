@@ -52,7 +52,7 @@ import SplashContainer from "../splash/splash_container";
           {profileButton}
         </div>
         <div className="spacer">
-          <a href="https://github.com/diegorenechavez" className="place-holder">
+          <a href="https://github.com/diegorenechavez" className="place-holder" target="_blank">
             GitHub
           </a>
           <p className="place-holde">|</p>

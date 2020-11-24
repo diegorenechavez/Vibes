@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     end 
     resource :session, only: [:create, :destroy]
     resources :pins, only: [:show, :index,:destroy]
-    resources :boards, only: [:create, :show, :update,:destroy]
+    resources :boards, only: [:create, :show, :update,:destroy] do
+      resources :board_pins, only: [:index]
+    end 
     resources :board_pins, only:[:index, :create, :destroy, :show]
   end
 
