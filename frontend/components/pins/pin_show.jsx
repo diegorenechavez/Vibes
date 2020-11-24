@@ -12,6 +12,7 @@ class PinShow extends React.Component {
         selectedBoardId: ""
     };
     this.handleSelection = this.handleSelection.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +39,10 @@ class PinShow extends React.Component {
           
         this.setState({ selectedBoardId: parseInt(e._targetInst.key) });
   }
+
+  goBack() {
+    this.props.history.goBack();
+  }
   
 
   render() {
@@ -58,10 +63,10 @@ class PinShow extends React.Component {
           <div className="right-container">
             <div className="button-container">
               <div className="back-button-container">
-                <Link to="/feed" className="wtf">
-                  <button className="back-button">Back</button>
+                <div className="wtf">
+                  <button className="back-button" onClick={() => this.goBack()}>Back</button>
 
-                </Link>
+                </div>
               </div>
               <div className="add-button-wrapper">
                 <button className="add-button">Add</button>

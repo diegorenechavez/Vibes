@@ -5,11 +5,30 @@ import {Link} from "react-router-dom";
 class PinsProfile extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            showMenu: false
+        };
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
     componentDidMount(){
     this.props.fetchUsersPins(this.props.currentUserId);
+    }
+
+    showMenu(event) {
+        event.preventDefault();
+
+        this.setState({
+            showMenu: true,
+        });
+    }
+
+    closeMenu() {
+
+        this.setState({
+            showMenu: false
+        });
     }
 
     render() {
@@ -24,23 +43,28 @@ class PinsProfile extends React.Component {
                         <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`} style={{backgroundColor:'hsl(348, 90%, 40%)', color:'white'}}>Pins</Link>
                     </div>
                     <div className="button-wrapper">
-                        <div className="new-board-button" >+</div>
-                        <ul className="dropdown-profile">
-                            <div className="item-holder">
-                                <li
-                                    className="dropdown-item"
-                                    onClick={() => openModal("create board")}
-                                >
-                                    Create New Board
+                        <div className="new-board-button" onClick={this.showMenu}>+</div>
+                        {this.state.showMenu ? (
+                            <>
+                                <div className="click-background" onClick={() => this.closeMenu()}></div>
+                                <div className="item-holder">
+                                    <li
+                                        className="dropdown-item"
+                                        onClick={() => openModal("create board").then(this.closeMenu())}
+                                    >
+                                        New Board
                     </li>
-                                <li
-                                    className="dropdown-item"
-                                    onClick={() => openModal("create pin")}
-                                >
-                                    Create New Pin
+                                    <li
+                                        className="dropdown-item"
+                                        onClick={() => openModal("create pin").then(this.closeMenu())}
+                                    >
+                                        New Pin
                     </li>
-                            </div>
-                        </ul>
+                                </div>
+                            </>
+                        )
+
+                            : (null)}
                     </div>
                 </div>
                 <HomeContainer/>
