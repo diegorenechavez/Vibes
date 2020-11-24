@@ -50,7 +50,7 @@ class CreatePin extends React.Component{
 
     render(){
         const {closeModal} = this.props;
-        const previewImage = this.state.photoUrl ? <img className="pin-image2" src={this.state.photoUrl} /> : null;
+        const previewImage = this.state.photoUrl ? <img className="pin-image2" src={this.state.photoUrl} /> : <img className="pin-preview" src={window.previewURL} alt="" srcset=""/>;
         return (
           <div className="modal-form">
             <button className="close-button" onClick={() => closeModal()}>

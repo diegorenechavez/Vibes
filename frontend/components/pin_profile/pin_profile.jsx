@@ -1,7 +1,7 @@
 import React from 'react';
 import OwnPinItem from "./own_pin";
 import HomeContainer from "../home_container/home_container";
-
+import {Link} from "react-router-dom";
 class PinsProfile extends React.Component {
     constructor(props) {
         super(props);
@@ -18,9 +18,13 @@ class PinsProfile extends React.Component {
             <div>
                 <div className="board-interface">
                     <h1 className="username">{this.props.currentUser.username}</h1>
-                    <h4 className="boards-header">Boards/pins</h4>
+                    <div className="board-header-container">
+                        <Link className="boards-header" to={`/users/${this.props.match.params.userId}`}>Boards</Link>
+                        
+                        <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`}>Pins</Link>
+                    </div>
                     <div className="button-wrapper">
-                        <button className="new-board-button">+</button>
+                        <div className="new-board-button" >+</div>
                         <ul className="dropdown-profile">
                             <div className="item-holder">
                                 <li

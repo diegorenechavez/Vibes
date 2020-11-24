@@ -79,8 +79,8 @@ a{
     color: hsl(50, 4%, 33%); 
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin-bottom: 35px;
     
 }
@@ -89,14 +89,14 @@ a{
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  border: 1px solid rgb(220, 220, 220);
+  /* border: 1px solid rgb(220, 220, 220); */
     margin-bottom: 25px;
     align-self: center;
     font-size: 45px;
-    color: white; 
+    color: grey; 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 40%;
-    background-color: hsl(211, 100%, 40%);
+    
     
     
     
@@ -143,6 +143,18 @@ a{
     color: hsl(50, 4%, 33%);
     font-size: 25px;
     font-family: sans-serif
+}
+
+.boards-header:hover{
+    color:hsl(348, 90%, 40%) ;
+}
+.board-header-container{
+    display: flex;
+    align-self: center;
+    height: 60px;
+    
+    width: 175px;
+    justify-content: space-evenly;
 }
 
 .board-title{

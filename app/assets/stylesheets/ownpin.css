@@ -5,6 +5,7 @@
   max-width: 1000px;
   column-gap: 1.5em;
   margin-top: 80px;
+  padding: 0;
 }
 
 .own-pin-image{
@@ -26,6 +27,7 @@
 
 .own-pin-title{
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(43, 43, 43);
+    color: rgb(63, 63, 63);
+    font-weight: 600;
 }
 

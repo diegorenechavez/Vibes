@@ -21,9 +21,12 @@ class Profile extends React.Component{
             <HomeContainer />
             <div className="board-interface">
               <h1 className="username">{this.props.currentUser.username}</h1>
-              <h4 className="boards-header">Boards</h4>
+              <div className="board-header-container">
+                <Link className="boards-header" to={`/users/${this.props.match.params.userId}`}>Boards</Link>
+                <Link className="boards-header" to={`/users/${this.props.match.params.userId}/pins`}>Pins</Link>
+              </div>
               <div className="button-wrapper">
-                <button className="new-board-button">+</button>
+                <div className="new-board-button" >+</div>
                 <ul className="dropdown-profile">
                   <div className="item-holder">
                     <li
