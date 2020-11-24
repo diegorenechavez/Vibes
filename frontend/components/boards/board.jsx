@@ -6,10 +6,10 @@ const Board = (props) => {
         <div>
             <Link to={`/users/${props.currentUser.id}/boards/${props.board.id}`}>
             <div className="board-card">
-    <div className="board-image">{props.board.description}</div>
+                    <div className="board-image">{props.board.name}</div>
             </div>
+                <div className="board-title">{props.board.description}</div>
             </Link>
-            <div className="board-title">{props.board.name}</div>
         </div>
     );
 };
