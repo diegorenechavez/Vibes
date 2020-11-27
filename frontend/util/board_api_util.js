@@ -23,13 +23,6 @@ export const createBoard = (board) => {
 };
 
 export const updateBoard = (board) => {
-  console.log("issuing board update req", {
-    url: `/api/boards/${board.id}`,
-    method: "PATCH",
-    data: {
-      board,
-    },
-  });
   return $.ajax({
     url: `/api/boards/${board.id}`,
     method: "PATCH",

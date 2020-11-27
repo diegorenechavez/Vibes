@@ -9,12 +9,6 @@ import { updateBoard } from "../../actions/board_actions";
 import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(
-    "ASS",
-    ownProps.match.params.boardId,
-    ownProps.match.params,
-    state.entities.boards
-  );
   return {
     board: state.entities.boards[ownProps.match.params.boardId],
     pins: Object.entries(state.entities.boardPins),

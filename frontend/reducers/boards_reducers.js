@@ -11,7 +11,6 @@ const BoardsReducer = (oldState = {}, action) => {
     case RECEIVE_BOARDS:
       return action.boards;
     case RECEIVE_BOARD:
-      console.log("===============", action);
       newState[action.board.id] = action.board;
       return newState;
     case REMOVE_BOARD:

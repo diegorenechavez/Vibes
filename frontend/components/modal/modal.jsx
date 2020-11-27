@@ -5,7 +5,7 @@ import LoginFormContainer from "../login/login_container";
 import SignUpFormContainer from "../sign_up/sign_up_form_container";
 import CreateBoardContainer from "../boards/create_board_form_container";
 import CreatePinContainer from "../pins/create_pin_container";
-import Edit from "../boards/edit_board/edit_board_container";
+
 
 function Modal({ modal, closeModal }) {
   if (!modal) {

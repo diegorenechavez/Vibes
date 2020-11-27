@@ -44,10 +44,9 @@ export const createBoard = (board) => (dispatch) => {
 };
 
 export const updateBoard = (board) => (dispatch) => {
-  return BoardApiUtil.updateBoard(board).then((result) => {
-    console.log("board update response", result);
-    return dispatch(received_board(result));
-  });
+  return BoardApiUtil.updateBoard(board).then((result) =>
+    dispatch(received_board(result))
+  );
 };
 
 export const deleteBoard = (boardId) => (dispatch) => {

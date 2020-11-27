@@ -6,7 +6,6 @@ import HomeContainer from "../home_container/home_container";
 class BoardShow extends React.Component {
   constructor(props) {
     super(props);
-    //console.log(this.props,props);
     this.state = {
       showMenu: false,
       showConfirm: false,
