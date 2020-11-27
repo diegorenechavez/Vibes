@@ -6,12 +6,14 @@ import {fetchAllBoards} from "../../actions/board_actions";
 import {openModal, closeModal} from '../../actions/modal_actions';
 import { fetchBoardPins } from "../../actions/board_pin_actions";
 import { selectBoardPins } from "../../reducers/selectors";
+import { fetchBoard } from "../../util/board_api_util";
 
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.currentUser],
     boards: Object.values(state.entities.boards),
-    pins: selectBoardPins(state.entities.boardPins, state.entities.pins, parseInt(ownProps.match.params.boardId)),
+    boardPins: Object.values(state.entities.boardPins)
+    // pins: selectBoardPins(state.entities.boardPins, state.entities.pins, parseInt(ownProps.match.params.boardId)),
   };
 };
 
@@ -21,7 +23,8 @@ const mapDispatchToProps = (dispatch) => {
     createPin: (pin) => dispatch(createPin(pin)),
     fetchAllBoards: (userId) => dispatch(fetchAllBoards(userId)),
     openModal: (formType) => dispatch(openModal(formType)),
-    fetchBoardPins: () => dispatch(fetchBoardPins()),
+    fetchBoardPins: (boardId) => dispatch(fetchBoardPins(boardId)),
+    // fetchBoard: (boardId) => dispatch(fetchBoard(boardId))
 
   };
 };

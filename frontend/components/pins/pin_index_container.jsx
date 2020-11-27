@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import PinsIndex from "./pins_index";
 import {fetchAllPins} from '../../actions/pin_actions';
-
+import { saveToBoard} from '../../actions/board_pin_actions'
 
 const mapStateToProps = state => {
     return {
@@ -11,7 +11,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
     return {
-    fetchAllPins: () => dispatch(fetchAllPins())
+      fetchAllPins: () => dispatch(fetchAllPins()),
+      saveToBoard: (boardPin) => dispatch(saveToBoard(boardPin)),
     };
 };
 

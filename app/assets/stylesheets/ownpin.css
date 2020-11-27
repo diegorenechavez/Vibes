@@ -19,6 +19,10 @@
     
      
 }
+.own-pin-image:hover{
+    transform: scale(1.02);
+    transition: all 0.25s;
+}
 
 .own-pin-container{
     page-break-inside: avoid;
@@ -58,4 +62,32 @@
 .own-pin-container:hover .pin-button-delete{
     display: block;
     cursor: pointer;
+}
+
+.board-pin-button{
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translate(-5%, -55%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: hsl(348, 90%, 40%);
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 6px;
+    font-weight: 200;
+    z-index: 5;
+    display: none;
+}
+
+.board-pin-button:active{
+    background-color: hsl(348, 90%, 35%)
+}
+
+.brick:hover .board-pin-button{
+    display: block;
 }

@@ -1,15 +1,15 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import PinsIndex from './pins_index';
-import HomeContainer from "../home_container/home_container"
-
+import React from "react";
+import { Link } from "react-router-dom";
+import PinsIndex from "./pins_index";
+import HomeContainer from "../home_container/home_container";
 
 class PinShow extends React.Component {
   constructor(props) {
     super(props);
     this.handleSave = this.handleSave.bind(this);
     this.state = {
-        selectedBoardId: ""
+      selectedBoardId: "",
+      showMenu: false,
     };
     this.handleSelection = this.handleSelection.bind(this);
     this.goBack = this.goBack.bind(this);
@@ -17,33 +17,38 @@ class PinShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllBoards(this.props.currentUser.id);
-
     this.props.fetchPin(this.props.match.params.pinId);
+  }
+
+  showMenu() {
+    this.setState({ showMenu: true });
+  }
+
+  closeMenu() {
+    this.setState({ showMenu: false });
   }
 
   handleSave(e) {
     e.preventDefault();
-    
+
     let boardPin = {
       board_id: parseInt(this.state.selectedBoardId),
       pin_id: parseInt(this.props.selectedPinId),
     };
-    
+
     this.props.saveToBoard(boardPin);
-    
-    
+    this.closeMenu();
   }
 
-  handleSelection(e){
-      e.preventDefault();
-          
-        this.setState({ selectedBoardId: parseInt(e._targetInst.key) });
+  handleSelection(e) {
+    e.preventDefault();
+
+    this.setState({ selectedBoardId: parseInt(e._targetInst.key) });
   }
 
   goBack() {
     this.props.history.goBack();
   }
-  
 
   render() {
     if (!this.props.boards) {
@@ -64,34 +69,45 @@ class PinShow extends React.Component {
             <div className="button-container">
               <div className="back-button-container">
                 <div className="wtf">
-                  <button className="back-button" onClick={() => this.goBack()}>Back</button>
-
+                  <button className="back-button" onClick={() => this.goBack()}>
+                    Back
+                  </button>
                 </div>
               </div>
               <div className="add-button-wrapper">
-                <button className="add-button">Add</button>
-                <div className="dd-board">
-                  {this.props.boards.map((board) => (
-                    <button
-                      className="board-name-dd"
-                      onClick={this.handleSelection}
-                      key={board.id}
-                      value={board.id}
-                    >
-                      {board.name}
-                    </button>
-                  ))}
-                  <button
-                    className="board-name-dd-save"
-                    onClick={this.handleSave}
-                  >Save!</button>
-                </div>
+                <button className="add-button" onClick={() => this.showMenu()}>
+                  Add To Board
+                </button>
+                {this.state.showMenu ? (
+                  <>
+                    <div className="click-background" onClick={() => this.closeMenu()}></div>
+                    <div className="dd-board">
+                      <h3 className="description">Boards</h3>
+                      {this.props.boards.map((board) => (
+                        <button
+                          className="board-name-dd"
+                          onClick={this.handleSelection}
+                          key={board.id}
+                          value={board.id}
+                        >
+                          {board.name}
+                        </button>
+                      ))}
+                      <button
+                        className="board-name-dd-save"
+                        onClick={this.handleSave}
+                      >
+                        Save To Board
+                      </button>
+                    </div>
+                  </>
+                ) : null}
               </div>
             </div>
             <h1 className="pin-description">{this.props.pin.description}</h1>
             <p className="content">{this.props.pin.content}</p>
           </div>
-                  <p>{}</p>
+          <p>{}</p>
         </div>
       </>
     );

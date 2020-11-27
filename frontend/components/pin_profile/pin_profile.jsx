@@ -6,7 +6,7 @@ class PinsProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showMenu: false
+            showMenu: false,
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
@@ -15,6 +15,8 @@ class PinsProfile extends React.Component {
     componentDidMount(){
     this.props.fetchUsersPins(this.props.currentUserId);
     }
+
+    
 
     showMenu(event) {
         event.preventDefault();

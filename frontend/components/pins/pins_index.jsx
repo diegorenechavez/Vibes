@@ -23,7 +23,7 @@ class PinsIndex extends React.Component{
             <HomeContainer />
                 <figure className="main-feed" >
                     {
-                       this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} fetchAllPins={this.props.fetchAllPins} />))
+                        this.props.pins.map((pin) => (<PinIndexitem pin={pin} key={pin.id} fetchAllPins={this.props.fetchAllPins} saveToBoard={this.props.saveToBoard} />))
                     }
                 </figure>
             </>

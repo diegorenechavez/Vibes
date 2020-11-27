@@ -1,7 +1,7 @@
 class Api::BoardPinsController < ApplicationController
     def index
       if params[:board_id]
-        @board_pins = BoardPin.where(board_id: params[:board_id])
+        @board_pins = BoardPin.includes(:pin).where(board_id: params[:board_id])
         render :index
       else
         @board_pins = BoardPin.all
@@ -26,9 +26,10 @@ class Api::BoardPinsController < ApplicationController
 
 
     def destroy
-      @board_pin= BoardPin.find_by(pin_id: params[:pin_id])
+      @board_pin= BoardPin.find_by(id: params[:id])
       if @board_pin.destroy
-        render json: @pin_id
+        render json: @board_pin.id
+       # // {board_pin_id: 12312, board_id:123123}
       else 
         render json: @board_pin.errors.full_messages, status: 422
       end 

@@ -30,10 +30,9 @@ export const receivedBoardPin = (boardPin) => {
   };
 };
 
-// 
 
-export const fetchBoardPins = () => dispatch =>{
-    return BoardApiUtil.fetchBoardPins().then((result) =>dispatch(receivedBoardPins(result)));
+export const fetchBoardPins = (boardId) => dispatch =>{
+    return BoardApiUtil.fetchBoardPins(boardId).then((result) =>dispatch(receivedBoardPins(result)));
 };
 
 export const saveToBoard = (boardPin) => (dispatch) => {

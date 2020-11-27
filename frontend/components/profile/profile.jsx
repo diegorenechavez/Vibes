@@ -14,7 +14,8 @@ class Profile extends React.Component{
       this.closeMenu = this.closeMenu.bind(this);
     }
     componentDidMount(){
-      this.props.fetchAllBoards(this.props.match.params.userId).then(()=> this.props.fetchBoardPins());
+      this.props.fetchAllBoards(this.props.match.params.userId);
+      
     }
 
   showMenu(event) {
@@ -74,10 +75,12 @@ class Profile extends React.Component{
             <div className="boards-index" onClick={() => this.closeMenu()}>
               {this.props.boards.map((board, i) => (
                 <Board
+                boardPins={this.props.boardPins}
                   board={board}
                   key={i}
+                  // fetchBoard={this.props.fetchBoard}
                   currentUser={this.props.currentUser}
-                  
+                  fetchBoardPins = {this.props.fetchBoardPins}
                 />
               ))}
             </div>
