@@ -115,7 +115,7 @@
     flex-direction: column;
     top: 49px;
     
-    box-shadow: 0pc 0px 11px rgb(0 0 0 / 12%);
+    box-shadow: 0pc 0px 11px rgba(0, 0, 0 , 12%);
     border-radius: 10px;
     padding: 10px;
     right: -140px;

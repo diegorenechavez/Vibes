@@ -1,19 +1,10 @@
 .create-image-header{
-     /* right: 60px;
-    color: hsl(50, 4%, 10%);
-    font-size: 30px;
-    font-family: sans-serif;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: rgba(118, 118, 118); */
     margin-top: 20px;
     right: 60px;
     color: hsl(0, 0%, 26%);
     font-size: 30px;
     font-family: sans-serif;
     text-align: center;
-    /* text-decoration: underline; */
-    /* text-decoration-color: rgba(118, 118, 118) */
 }
 .pin-image2{
       width: 500px;
