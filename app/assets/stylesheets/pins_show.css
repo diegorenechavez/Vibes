@@ -28,15 +28,13 @@
   font-size: 17px;
   padding: 10px 5px;
   border: none;
-  color: hsl(0deg 0% 13%);
-  border-top: 1px solid hsl(50deg 4% 80%);
+  color: hsl(0 0% 13%);
+  border-top: 1px solid hsl(50 4% 80%);
 }
 
 .description {
   font-family: sans-serif;
-  /* text-align: center; */
   margin-bottom: 0;
-  /* border-bottom: 1px solid rgba(0,0,0,75%); */
   padding-bottom: 1px;
   font-size: 170%;
   font-weight: normal;
