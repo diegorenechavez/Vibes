@@ -10,6 +10,7 @@ class PinShow extends React.Component {
     this.state = {
       selectedBoardId: "",
       showMenu: false,
+      showFeedback: false
     };
     this.handleSelection = this.handleSelection.bind(this);
     this.goBack = this.goBack.bind(this);
@@ -18,6 +19,13 @@ class PinShow extends React.Component {
   componentDidMount() {
     this.props.fetchAllBoards(this.props.currentUser.id);
     this.props.fetchPin(this.props.match.params.pinId);
+  }
+
+  showFeedback() { 
+    this.setState({showFeedback:true})
+    setTimeout(() => { 
+      this.setState({ showFeedback: false })
+    }, 2000)
   }
 
   showMenu() {
@@ -38,6 +46,7 @@ class PinShow extends React.Component {
 
     this.props.saveToBoard(boardPin);
     this.closeMenu();
+    this.showFeedback()
   }
 
   handleSelection(e) {
@@ -80,7 +89,10 @@ class PinShow extends React.Component {
                 </button>
                 {this.state.showMenu ? (
                   <>
-                    <div className="click-background" onClick={() => this.closeMenu()}></div>
+                    <div
+                      className="click-background"
+                      onClick={() => this.closeMenu()}
+                    ></div>
                     <div className="dd-board">
                       <h3 className="description">Boards</h3>
                       {this.props.boards.map((board) => (
@@ -104,10 +116,17 @@ class PinShow extends React.Component {
                 ) : null}
               </div>
             </div>
+
             <h1 className="pin-description">{this.props.pin.description}</h1>
             <p className="content">{this.props.pin.content}</p>
           </div>
-          <p>{}</p>
+          {this.state.showFeedback ? (
+            <div className="feedback-container">
+              <div className="feedback">
+                <h3 className="saved">Saved To Board!</h3>
+              </div>
+            </div>
+          ) : null}
         </div>
       </>
     );
